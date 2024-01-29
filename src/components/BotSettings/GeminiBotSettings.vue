@@ -2,14 +2,13 @@
   <CommonBotSettings
     :settings="settings"
     :brand-id="brandId"
-    mutation-type="setOpenaiApi"
+    mutation-type="setGemini"
     :watcher="watcher"
   ></CommonBotSettings>
 </template>
 
 <script>
-import _bots from "@/bots";
-import Bot from "@/bots/openai/OpenAIAPIBot";
+import Bot from "@/bots/GeminiBot";
 import CommonBotSettings from "@/components/BotSettings/CommonBotSettings.vue";
 import { Type } from "./settings.const";
 
@@ -19,7 +18,7 @@ const settings = [
     name: "apiKey",
     title: "openaiApi.apiKey",
     description: "settings.secretPrompt",
-    placeholder: "sk-...",
+    placeholder: "...",
   },
   {
     type: Type.Slider,
@@ -27,12 +26,30 @@ const settings = [
     title: "openaiApi.temperature",
     description: "openaiApi.temperaturePrompt",
     min: 0,
-    max: 2,
+    max: 1,
     step: 0.1,
     ticks: {
       0: "openaiApi.temperature0",
-      2: "openaiApi.temperature2",
+      1: "openaiApi.temperature2",
     },
+  },
+  {
+    type: Type.Slider,
+    name: "topK",
+    title: "gemini.topK",
+    description: "gemini.topKPrompt",
+    min: 1,
+    max: 100,
+    step: 1,
+  },
+  {
+    type: Type.Slider,
+    name: "topP",
+    title: "gemini.topP",
+    description: "gemini.topPPrompt",
+    min: 0.1,
+    max: 1,
+    step: 0.01,
   },
   {
     type: Type.Slider,
@@ -42,13 +59,6 @@ const settings = [
     min: 0,
     max: 10,
     step: 1,
-  },
-  {
-    type: Type.Text,
-    name: "alterUrl",
-    title: "openaiApi.alterUrl",
-    description: "openaiApi.alterUrlPrompt",
-    placeholder: "https://your.proxy.com/v1",
   },
 ];
 export default {
@@ -63,9 +73,7 @@ export default {
   },
   methods: {
     watcher() {
-      _bots.all
-        .filter((bot) => bot instanceof Bot)
-        .map((bot) => bot.setupModel());
+      Bot.getInstance().setupModel();
     },
   },
 };

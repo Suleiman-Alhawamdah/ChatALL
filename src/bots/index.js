@@ -1,4 +1,5 @@
 // Bots
+import GeminiBot from "@/bots/GeminiBot";
 import ChatGPT35Bot from "@/bots/openai/ChatGPT35Bot";
 import ChatGPT4Bot from "@/bots/openai/ChatGPT4Bot";
 import ChatGPTBrowsingBot from "@/bots/openai/ChatGPTBrowsingBot";
@@ -27,6 +28,9 @@ import ClaudeInstantPoeBot from "./poe/ClaudeInstantPoeBot";
 import ClaudeInstant100kPoeBot from "./poe/ClaudeInstant100kPoeBot";
 import ClaudePlusPoeBot from "./poe/ClaudePlusPoeBot";
 import ChatGPT432kPoeBot from "./poe/ChatGPT432kPoeBot";
+import Llama270bPoeBot from "./poe/Llama270bPoeBot";
+import GooglePalm2PoeBot from "./poe/GooglePalm2PoeBot";
+import CodeLlama34bPoeBot from "./poe/CodeLlama34bPoeBot";
 import SkyWorkBot from "./SkyWorkBot";
 import ChatGPT4MobileBot from "./openai/ChatGPT4MobileBot";
 import OpenAIAPI3516KBot from "./openai/OpenAIAPI3516KBot";
@@ -57,6 +61,7 @@ import WenxinQianfan4Bot from "./baidu/WenxinQianfan4Bot";
 import Zephyr7bBot from "./huggingface/Zephyr7bBot";
 
 const all = [
+  GeminiBot.getInstance(),
   Qihoo360AIBrainBot.getInstance(),
   AlpacaBot.getInstance(),
   SageBot.getInstance(), // Assistant@Poe
@@ -73,6 +78,7 @@ const all = [
   ClaudeBot.getInstance(),
   ClaudeAIBot.getInstance(),
   ClaudePlusPoeBot.getInstance(),
+  CodeLlama34bPoeBot.getInstance(),
   CodeLlamaHCBot.getInstance(),
   CodeLlamaBot.getInstance(),
   WenxinQianfanBot.getInstance(),
@@ -95,11 +101,13 @@ const all = [
   GradioAppBot.getInstance(),
   Llama27bBot.getInstance(),
   Llama213bBot.getInstance(),
+  Llama270bPoeBot.getInstance(),
   Llama270bBot.getInstance(),
   Llama2HC70bBot.getInstance(),
   MOSSBot.getInstance(),
   HuggingChatBot.getInstance(),
   OpenAssistantBot.getInstance(),
+  GooglePalm2PoeBot.getInstance(),
   PhindBot.getInstance(),
   PiBot.getInstance(),
   QianWenBot.getInstance(),
@@ -145,6 +153,8 @@ export const botTags = {
     bots.getBotByClassName("ChatGPT35PoeBot"),
     bots.getBotByClassName("ClaudeBot"),
     bots.getBotByClassName("ClaudeInstantPoeBot"),
+    bots.getBotByClassName("GooglePalm2PoeBot"),
+    bots.getBotByClassName("CodeLlama34bPoeBot"),
     bots.getBotByClassName("HuggingChatBot"),
     bots.getBotByClassName("Llama27bBot"),
     bots.getBotByClassName("Llama213bBot"),
@@ -190,6 +200,7 @@ export const botTags = {
     bots.getBotByClassName("Llama27bBot"),
     bots.getBotByClassName("Llama213bBot"),
     bots.getBotByClassName("Llama270bBot"),
+    bots.getBotByClassName("Llama270bPoeBot"),
     bots.getBotByClassName("Llama2HC70bBot"),
     bots.getBotByClassName("MOSSBot"),
     bots.getBotByClassName("OpenAssistantBot"),
@@ -201,12 +212,14 @@ export const botTags = {
     bots.getBotByClassName("ChatGLM36bBot"),
     bots.getBotByClassName("CodeLlamaBot"),
     bots.getBotByClassName("CodeLlamaHCBot"),
+    bots.getBotByClassName("CodeLlama34bPoeBot"),
     bots.getBotByClassName("Wizardlm13bBot"),
     bots.getBotByClassName("Wizardlm70bBot"),
     bots.getBotByClassName("FalconHC180bBot"),
     bots.getBotByClassName("Zephyr7bBot"),
   ],
   api: [
+    bots.getBotByClassName("GeminiBot"),
     bots.getBotByClassName("AzureOpenAIAPIBot"),
     bots.getBotByClassName("OpenAIAPI35Bot"),
     bots.getBotByClassName("OpenAIAPI3516KBot"),

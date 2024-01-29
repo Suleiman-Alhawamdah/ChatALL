@@ -103,6 +103,14 @@
     "gpt-4-browsing": "Navegación Web",
     "gpt-4-mobile": "GPT-4 móvil V2"
   },
+  "gemini": {
+    "name": "Gemini",
+    "gemini-pro": "Gemini-Pro",
+    "topK": "topK",
+    "topKPrompt": "Un topK de 1 significa que el token seleccionado es el más probable entre todos los tokens en el vocabulario del modelo (también llamado decodificación voraz).",
+    "topP": "topP",
+    "topPPrompt": "Los tokens se seleccionan desde el más probable hasta el menos probable hasta que la suma de sus probabilidades iguale el valor de topP"
+  },
   "claudeAi": {
     "name": "Claude 2"
   },
@@ -140,6 +148,7 @@
     "gpt-35-turbo": "GPT-3.5-turbo",
     "gpt-35-turbo-16k": "GPT-3.5-Turbo-16K",
     "gpt-4": "GPT-4",
+    "gpt-4-1106-preview": "gpt-4-1106-preview",
     "temperature": "Temperatura",
     "temperaturePrompt": "Cuanto mayor sea la temperatura, más creativo será el texto, pero más probable es que sea incoherente.",
     "temperature0": "Más determinista",
@@ -153,7 +162,11 @@
     "a2_2": "Claude-2-100k",
     "beaver": "GPT-4",
     "capybara": "Assistant",
-    "chinchilla": "ChatGPT 3.5"
+    "chinchilla": "ChatGPT 3.5",
+    "vizcacha": "GPT-4-32k",
+    "code_llama_34b_instruct": "Code-Llama-34b",
+    "acouchy": "Google-PaLM-2",
+    "llama_2_70b_chat": "Llama-2-70b"
   },
   "qianWen": {
     "name": "QianWen"

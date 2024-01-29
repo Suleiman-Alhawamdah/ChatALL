@@ -134,6 +134,14 @@
     "gpt-4-browsing": "Web 瀏覽",
     "gpt-4-mobile": "GPT-4 行動裝置版 V2"
   },
+  "gemini": {
+    "name": "Gemini",
+    "gemini-pro": "Gemini-Pro",
+    "topK": "topK",
+    "topKPrompt": "topK為1表示選定的標記是模型詞彙中所有標記中最可能的（也稱為貪婪解碼）",
+    "topP": "topP",
+    "topPPrompt": "從最可能到最不可能的標記被選出，直到它們的概率總和等於topP值"
+  },
   "claudeAi": {
     "name": "Claude 2"
   },
@@ -184,6 +192,7 @@
     "gpt-35-turbo": "gpt-3.5-turbo",
     "gpt-35-turbo-16k": "gpt-3.5-turbo-16k",
     "gpt-4": "gpt-4",
+    "gpt-4-1106-preview": "gpt-4-1106-preview",
     "temperature": "Temperature",
     "temperaturePrompt": "Temperature 越高，生成的文字越有創造性，但也越沒條理",
     "temperature0": "更具確定性",
@@ -198,7 +207,10 @@
     "beaver": "GPT-4",
     "capybara": "Assistant",
     "chinchilla": "ChatGPT 3.5",
-    "vizcacha": "GPT-4-32k"
+    "vizcacha": "GPT-4-32k",
+    "code_llama_34b_instruct": "Code-Llama-34b",
+    "acouchy": "Google-PaLM-2",
+    "llama_2_70b_chat": "Llama-2-70b"
   },
   "qianWen": {
     "name": "通義千問"
